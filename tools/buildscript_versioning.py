@@ -39,10 +39,10 @@ hf = """
 with open(FILENAME_VERSION_H, 'w+') as f:
     f.write(hf)
 
-with open("data_embed/index.html", "r") as f:
+with open("data/index.html", "r") as f:
     index_html_content = f.read()
 
 index_html_content = index_html_content.replace('<!--VERSION-->', version_string)
 
-with open("data_embed/index.html.out", "w") as f:
+with open("data/index.html.out", "w") as f:
     f.write(index_html_content)

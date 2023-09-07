@@ -9,12 +9,12 @@
 /**
  * @see board_build.embed_txtfiles in platformio.ini
  */
-extern const char web_index_html[] asm("_binary_data_embed_index_html_out_start");
-extern const char web_index_html_end[] asm("_binary_data_embed_index_html_out_end");
-extern const char web_style_css[] asm("_binary_data_embed_style_css_out_start");
-extern const char web_style_css_end[] asm("_binary_data_embed_style_css_out_end");
-extern const char web_js_js[] asm("_binary_data_embed_js_js_out_start");
-extern const char web_js_js_end[] asm("_binary_data_embed_js_js_out_end");
+extern const char web_index_html[] asm("_binary_data_index_html_out_start");
+extern const char web_index_html_end[] asm("_binary_data_index_html_out_end");
+extern const char web_style_css[] asm("_binary_data_style_css_out_start");
+extern const char web_style_css_end[] asm("_binary_data_style_css_out_end");
+extern const char web_js_js[] asm("_binary_data_js_js_out_start");
+extern const char web_js_js_end[] asm("_binary_data_js_js_out_end");
 
 // Variable needed to send beacon from html page
 extern bool manBeacon;

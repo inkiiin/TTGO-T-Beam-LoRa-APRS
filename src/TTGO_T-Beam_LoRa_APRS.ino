@@ -54,20 +54,21 @@
   #define BUTTON  39                //pin number for Button on TTGO T-Beam
   #define BUZZER 15                 // enter your buzzer pin gpio
   const byte TXLED  = 4;            //pin number for LED on TX Tracker
-/* Original LORA32 V2.1 Setup
-#elif LORA32_21
+// Original LORA32 V2.1 Setup
+#elif LORA32_21_1
   #define I2C_SDA 4
   #define I2C_SCL 15
   #define BUTTON 2                  //pin number for BUTTO
   #define BUZZER 13                 // enter your buzzer pin gpio
   const byte TXLED  = 4;            //pin number for LED on TX Tracker
-*/
-#elif LORA32_21                     // Modified as in #47
+
+#elif LORA32_21_2                     // Modified as in #47
   #define I2C_SDA 21
   #define I2C_SCL 22
   #define BUTTON 2                  //pin number for BUTTO
   #define BUZZER 13                 // enter your buzzer pin gpio
   const byte TXLED  = 4;            //pin number for LED on TX Tracker
+
 #elif LORA32_2
   #define I2C_SDA 21
   #define I2C_SCL 22
@@ -626,7 +627,7 @@ void setup(){
   Serial.begin(115200);
 
   #ifdef BUZZER
-    ledcSetup(0,1E5,12);
+    ledcSetup(0,5E3,12);
     ledcAttachPin(BUZZER,0);
     ledcWriteTone(0,0);  // turn off buzzer on start
   #endif
